@@ -94,6 +94,7 @@ def main():
     ax = fig.add_subplot(111)
     ax.plot(pm_guessf,marker='s',color="firebrick",lw=3,ls="dashed",label="fit")
     ax.plot(pm_measuredf,marker='o',color="black",lw=3,ls="solid",label="measured")
+    ax.legend(frameon=False,fontsize=20)
     pl.show()
 
 def test():
