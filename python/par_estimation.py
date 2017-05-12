@@ -91,10 +91,12 @@ def main():
     pm_guessf    = np.concatenate(estimatePower(res.x,segments))
     pm_measuredf = np.concatenate([ s[2] for s in segments ])
     fig =pl.figure()
+    fig.subplots_adjust(left=0.16)
     ax = fig.add_subplot(111)
     ax.plot(pm_guessf,marker='s',color="firebrick",lw=3,ls="dashed",label="fit")
     ax.plot(pm_measuredf,marker='o',color="black",lw=3,ls="solid",label="measured")
     ax.legend(frameon=False,fontsize=20)
+    ax.set_ylabel("Power (W)",fontsize=20)
     pl.show()
 
 def test():
